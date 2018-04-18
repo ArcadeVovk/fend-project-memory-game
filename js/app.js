@@ -46,8 +46,14 @@ function displaySymbol(event) {
   event.target.classList.add("open","show")
 };
 
+function addToOpenList(event) {
+  const card = event.target.cloneNode(true);
+  openList.appendChild(card);
+};
+
 deck.addEventListener("click", function(event) {
   if (event.target.className === "card") {
     displaySymbol(event);
+    addToOpenList(event);
   }
 })
