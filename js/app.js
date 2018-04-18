@@ -39,3 +39,7 @@ function shuffle(array) {
 
 
 const deck = document.querySelector(".deck")
+
+deck.addEventListener("click", function() {
+
+})
