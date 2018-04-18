@@ -40,6 +40,8 @@ function shuffle(array) {
 
 const deck = document.querySelector(".deck");
 
+const openList = document.createDocumentFragment();
+
 function displaySymbol(event) {
   event.target.classList.add("open","show")
 };
