@@ -51,13 +51,19 @@ function addToOpenList(event) {
   openList.appendChild(card);
 };
 
+function lockOpenCards () {
+    const cards = document.querySelectorAll(".open.show");
+    cards.forEach(function(v, i, a){
+      cards[i].className = "card match"})
+}
+
 deck.addEventListener("click", function(event) {
   if (event.target.className === "card") {
     displaySymbol(event);
     addToOpenList(event);
     if (openList.children.length > 1) {
       if (openList.firstElementChild.className == openList.lastElementChild.className) {
-        alert("hurraw!1!");
+        lockOpenCards();
       } else {
         alert("oh, sh**!");
       }
