@@ -47,7 +47,7 @@ function displaySymbol(event) {
 };
 
 function addToOpenList(event) {
-  const card = event.target.cloneNode(true);
+  const card = event.target.firstElementChild.cloneNode(true);
   openList.appendChild(card);
 };
 
