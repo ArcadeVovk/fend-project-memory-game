@@ -51,10 +51,16 @@ function addToOpenList(event) {
   openList.appendChild(card);
 };
 
-function lockOpenCards () {
+function lockOpenCards() {
     const cards = document.querySelectorAll(".open.show");
     cards.forEach(function(v, i, a){
-      cards[i].className = "card match"})
+      cards[i].className = "card match"});
+};
+
+function hideOpenCards() {
+    const cards = document.querySelectorAll(".open.show");
+    cards.forEach(function(v, i, a){
+      cards[i].className = "card"});
 }
 
 deck.addEventListener("click", function(event) {
@@ -65,7 +71,7 @@ deck.addEventListener("click", function(event) {
       if (openList.firstElementChild.className == openList.lastElementChild.className) {
         lockOpenCards();
       } else {
-        alert("oh, sh**!");
+        hideOpenCards();
       }
     }
   }
